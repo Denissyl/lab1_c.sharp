@@ -13,7 +13,7 @@ class TaskSolver
     // 1.3 Преобразование символа в число
     public static int CharToNum(char x)
     {
-        return x - '0';
+        return Convert.ToChar(x);
     }
 
     // 1.5 Двузначное число
@@ -132,7 +132,8 @@ class TaskSolver
     {
         int maxAbsValue = Math.Abs(arr[0]);
         foreach (int num in arr)
-            if (Math.Abs(num) > maxAbsValue) maxAbsValue = Math.Abs(num);
+            if (Math.Abs(num) > maxAbsValue) 
+                maxAbsValue = Math.Abs(num);
         return maxAbsValue;
     }
 
@@ -150,7 +151,8 @@ class TaskSolver
     public static int[] ReverseBack(int[] arr)
     {
         int[] reversed = new int[arr.Length];
-        for (int i = 0; i < arr.Length; i++) reversed[i] = arr[arr.Length - 1 - i];
+        for (int i = 0; i < arr.Length; i++) 
+            reversed[i] = arr[arr.Length - 1 - i];
         return reversed;
     }
 
